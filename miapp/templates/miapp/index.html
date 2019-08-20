@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MDVL</title>
+</head>
+<style> 
+#f{
+    float: left;
+    padding-left: 5px;
+    list-style: none;
+}
+</style>
+<header> <h1>Biblioteca</h1>
+    <nav>
+        <ul>
+            <li id="f" ><a href="{% url 'inicio' %}">inicio</a></li>
+            <li id="f" ><a href="{% url 'listar_libros' %}">Libros</a></li>
+            <li id="f"><a href="#">Ejemplares</a></li>
+            <li id="f"><a href="#">Prestamo</a></li>
+            <li id="f"><a href="#">iniciar sesion</a></li><br>
+        </ul>
+    </nav>
+</header>
+<body>
+   
+    <p>
+        esta es mi pagina de inicio
+    </p>
+</body>
+</html>

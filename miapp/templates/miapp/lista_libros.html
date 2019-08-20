@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<header> <h1>Biblioteca</h1>
+    <nav>
+        <ul>
+            <li id="f" ><a href="#">inicio</a></li>
+            <li id="f" ><a href="#">Libros</a></li>
+            <li id="f"><a href="#">Ejemplares</a></li>
+            <li id="f"><a href="#">Prestamo</a></li>
+            <li id="f"><a href="#">iniciar sesion</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <h2>Listado De Libros</h2>
+
+    <table>
+        <th>Nombre</th>
+        <th>descripcion</th>
+        <th>isbn</th>
+        <th>copias</th>
+        <th>editar</th>
+        <th>borrar</th>
+        {% for libro in object_list %}
+        <tr>
+            <td>{{ libro.nombre }}</td>
+            <td>{{ libro.descripcion }}</td>
+            <td>{{ libro.isbn }}</td>
+            <td>{{ libro.copias }}</td>
+            <td><a href="#">Editar</a></td>
+            <td><a href="#">Borrar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="#">Nuevo libro</a>
+
+</body>
+</html>
