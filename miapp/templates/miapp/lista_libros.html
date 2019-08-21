@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<header> <h1>Biblioteca</h1>
-    <nav>
-        <ul>
-            <li id="f" ><a href="#">inicio</a></li>
-            <li id="f" ><a href="#">Libros</a></li>
-            <li id="f"><a href="#">Ejemplares</a></li>
-            <li id="f"><a href="#">Prestamo</a></li>
-            <li id="f"><a href="#">iniciar sesion</a></li>
-        </ul>
-    </nav>
-</header>
-<body>
+{% extends 'base.html' %}
+
+{% block principal %}
     <h2>Listado De Libros</h2>
 
     <table>
@@ -39,7 +22,5 @@
         {% endfor %}
     </table>
 
-    <a href="#">Nuevo libro</a>
-
-</body>
-</html>
+    <a href="{% url 'nuevo_libro' %}">Nuevo libro</a>
+    {% endblock %}
